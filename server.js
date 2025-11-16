@@ -20,6 +20,8 @@ app.get("/api/:user/:password", (req, res) => {
 
       if (newData) {
         res.json({ login: newData.login, email: newData.email });
+      } else {
+        res.json({ error: "Error" });
       }
     });
 });
