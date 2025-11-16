@@ -1,0 +1,25 @@
+{
+  "name": "24hforecast-api",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Miha77777ua/24hforecast-api#readme",
+  "bugs": {
+    "url": "https://github.com/Miha77777ua/24hforecast-api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Miha77777ua/24hforecast-api.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  }
+}
