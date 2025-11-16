@@ -12,7 +12,7 @@ const corsOptions = {
 app.use(express.json());
 app.use(cors(corsOptions));
 
-app.get("/api/:login/:password", (req, res) => {
+app.get("/api/:user/:password", (req, res) => {
   fetch(`https://${process.env.KEY}.mockapi.io/users`)
     .then(res => res.json())
     .then(data => {
