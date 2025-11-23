@@ -6,7 +6,7 @@ const app = express();
 const port = 5000;
 
 const corsOptions = {
-  origin: ["https://miha77777ua.github.io/Forecaster/"],
+  origin: ["https://miha77777ua.github.io"],
 };
 
 app.use(express.json());
