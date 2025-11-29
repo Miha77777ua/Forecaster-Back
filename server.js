@@ -6,7 +6,7 @@ const app = express();
 const port = 5000;
 
 const corsOptions = {
-  origin: ["https://miha77777ua.github.io"],
+  origin: ["https://miha77777ua.github.io", "http://localhost:5173"],
 };
 
 app.use(express.json());
