@@ -12,6 +12,14 @@ const corsOptions = {
 app.use(express.json());
 app.use(cors(corsOptions));
 
+app.get("/news/:page", (req, res) => {
+  fetch(`https://newsapi.org/v2/everything?q=nature&apiKey=${process.env.NEWS_KEY}&pageSize=4&page=${req.params.page}`)
+    .then(res => res.json())
+    .then(data => {
+      res.json(data);
+    });
+});
+
 app.get("/api/:user/:password", (req, res) => {
   fetch(`https://${process.env.KEY}.mockapi.io/users`)
     .then(res => res.json())
