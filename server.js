@@ -60,4 +60,18 @@ app.post("/api", async (req, res) => {
   }
 });
 
+app.get("/weather/:city", async (req, res) => {
+  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${req.params.city}&units=metric&lang=en&appid=${process.env.WEZ_KEY}`);
+  const data = await response.json();
+
+  res.json(data);
+});
+
+app.get("/forecast/:city", async (req, res) => {
+  const response = await fetch(`https://pro.openweathermap.org/data/2.5/forecast?q=${req.params.city}&units=metric&lang=en&appid=${process.env.WEZ_KEY}`);
+  const data = await response.json();
+
+  res.json(data);
+});
+
 app.listen(port, () => console.log("Listening"));
